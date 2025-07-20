@@ -1,0 +1,20 @@
+# Compiled executables
+*.exe
+*.out
+*.o
+*.obj
+
+# VS Code settings (optional - you can remove this line if you want to include VS Code settings)
+.vscode/
+
+# Windows specific files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Mac specific files
+.DS_Store
+
+# Temporary files
+*.tmp
+*.temp
