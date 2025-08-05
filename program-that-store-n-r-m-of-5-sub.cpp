@@ -1,4 +1,4 @@
-//program that store name ,roll and make of 5 subjects
+//program that store name ,roll and marks of 5 subjects
 #include <iostream>
 using namespace std;
 
@@ -13,12 +13,13 @@ public:
 };
 
 void student::getdata() {
-    cout << "enter name: ";
-    cin >> name;
-    cout << "Enter roll no:";
+    cout << "Enter name: ";
+    getline(cin, name);  // Use getline to handle names with spaces
+    cout << "Enter roll no: ";
     cin >> roll;
+    cout << "Enter marks for 5 subjects:" << endl;
     for (int i = 0; i < 5; i++) {
-        cout << "Enter marks";
+        cout << "Subject " << (i + 1) << ": ";
         cin >> marks[i];
     }
 }
@@ -26,16 +27,19 @@ void student::getdata() {
 void student::showdata() {
     cout << "Name = " << name << endl;
     cout << "Roll No = " << roll << endl;
-    cout << "Marks in 5 subject=";
+    cout << "Marks in 5 subjects: ";
     for (int i = 0; i < 5; i++) {
-        cout << marks[i] << "\t";
+        cout << marks[i];
+        if (i < 4) cout << ", ";  // Add comma separator except for last mark
     }
+    cout << endl;  // Add newline at the end
 }
 
 int main() {
     student s;
+    cout << "=== Student Information System ===" << endl;
     s.getdata();
-    cout << "students Detail: " << endl;
+    cout << "\n=== Student Details ===" << endl;
     s.showdata();
     return 0;
 }
