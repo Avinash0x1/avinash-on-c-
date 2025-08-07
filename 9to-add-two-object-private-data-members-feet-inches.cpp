@@ -23,22 +23,10 @@ public:
     void getdata(int f, int i) {
         feet = f;
         inches = i;
-        normalizeDistance(); // Ensure inches are in valid range
     }
-    
-    // Method to get input from user
-    void inputFromUser() {
-        cout << "Enter feet: ";
-        cin >> feet;
-        cout << "Enter inches: ";
-        cin >> inches;
-        normalizeDistance();
-    }
-    
     void showdata() {
         cout << "Feet: " << feet << ", Inches: " << inches << endl;
     }
-    
     void adddistance(Distance1 d1, Distance1 d2) {
         feet = d1.feet + d2.feet;
         inches = d1.inches + d2.inches;
@@ -77,25 +65,6 @@ int main() {
     d3.adddistance(d1, d2);
     cout << "Sum: ";
     d3.showdata();
-    
-    // Method 2: Interactive input
-    cout << "\n--- Interactive Input ---" << endl;
-    Distance1 d4, d5, d6;
-    
-    cout << "Enter first distance:" << endl;
-    d4.inputFromUser();
-    
-    cout << "Enter second distance:" << endl;
-    d5.inputFromUser();
-    
-    d6.adddistance(d4, d5);
-    cout << "\nResult:" << endl;
-    cout << "First distance: ";
-    d4.showdata();
-    cout << "Second distance: ";
-    d5.showdata();
-    cout << "Sum: ";
-    d6.showdata();
     
     return 0;
 }
