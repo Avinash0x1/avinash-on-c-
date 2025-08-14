@@ -35,7 +35,7 @@ public:
 int main() {
     D d;
     
-    cout << "=== Single Inheritance Demo (Public) ===" << endl;
+    cout << "Single Inheritance Demo (Public)" << endl;
     
     cout << "\nFirst calculation:" << endl;
     d.mul();
